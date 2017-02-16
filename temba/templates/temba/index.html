@@ -1,0 +1,13 @@
+{% extends "temba/header.html" %}
+{% block content %}
+{% if all_groups_list %}
+    <table>
+      <tr><th>Contact Group</th><th>Number of Contacts</th></tr>
+      {% for group,contacts in all_groups_list %}
+        <tr><td>{{group}}</td><td>{{contacts}}</td></tr>
+      {% endfor %}
+    </table>
+{% else %}
+    <p>No contact groups are available.</p>
+{% endif %}
+{% endblock %}
